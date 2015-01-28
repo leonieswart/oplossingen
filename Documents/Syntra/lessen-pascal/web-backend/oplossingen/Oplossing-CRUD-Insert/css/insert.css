@@ -1,0 +1,40 @@
+body{
+	font-family: arial;
+	font-size: 17px;
+}
+
+label, input{
+	float: left;
+	clear: left;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+input{
+	padding: 5px;
+	width: 250px;
+}
+
+input[type="submit"]{
+	width: 266px;
+	padding: 10px 0 10px 0;
+	height: 50px;
+}
+
+.boodschap{
+
+	border: 1px solid darkgray;
+	border-radius: 15px;
+	width: 250px;
+	height: 100px;
+	display: block;
+}
+
+.verborgen{
+	display: none;
+}
+
+.tonen {
+	visibility: visible;
+}
+

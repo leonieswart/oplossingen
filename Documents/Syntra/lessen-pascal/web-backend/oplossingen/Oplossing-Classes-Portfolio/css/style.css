@@ -1,0 +1,161 @@
+@font-face{
+	font-family:DexteraTrial;
+	src:url(font/dxta_trial.woff);
+}
+
+@font-face{
+	font-family:AlwaysForever;
+	src:url(font/Always Forever.ttf);
+}
+
+body{
+	width: 100%;
+	font-family: arial;
+}
+
+
+
+.header{
+	border-bottom: 1px solid black;
+	width: 99%;
+}
+
+.header h2{
+	float: left;
+	font-weight: lighter;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 5px;
+	font-family: DexteraTrial;
+	font-size: 40px;
+}
+
+.header ul{
+	float: right;
+	margin-right: 25px;
+	margin-top: 5px;
+}
+
+.header ul li{
+	float: left;
+	margin-left: 20px;
+	list-style: none;
+	border-left: 1px solid black;
+	padding-left: 2px;
+	font-family: AlwaysForever;
+	font-size: 45px;
+}
+
+.header ul li a{
+		text-decoration: none;
+		color: black;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.container{
+    width: 200px;
+    height: 200px;
+    float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	padding: 2px;
+}
+
+.container h5{
+	font: arial;
+	font-size: 12px;
+	float: left;
+	margin-top: 0;
+}
+
+.container p{
+	font-size: 10px;
+	font:arial;
+	float: right;
+	margin-top: 0;
+}
+
+.container p.after{
+	clear: both;
+}
+
+.img{
+	width: 150px;
+	height: 150px;
+	margin-left: 25px;
+	margin-right: 25px;
+
+}
+
+.contact{
+	width: 550px;
+	border: 1px solid gray;
+	height: 400px;
+	float: left;
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.contact label{
+	float: left;
+	clear: left;
+	margin-top: 30px;
+	margin-left: 10px;
+	font: arial;
+	font-size: 15px;
+}
+
+.contact input{
+	float: right;
+	clear: right;
+	margin-right: 200px;
+	margin-top: 25px;
+	font: arial;
+	font-size: 15px;	
+}
+
+.contactSubmit{
+	visibility: hidden;	
+}
+
+.bevestig{
+	width: 550px;
+	border: 1px solid gray;
+	height: 400px;
+	float: right;
+	margin-right: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.bevestig p{
+	float: left;
+	clear: left;
+	margin-top: 30px;
+	margin-left: 10px;
+	font: arial;
+	font-size: 15px;
+}
+
+iframe{
+	margin-right: 15%;
+	margin-left: 15%;
+	margin-top: 20px;
+}
+
+.footer{
+	border-top: 1px solid gray;
+	clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: 1em;
+    text-align: center;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<meta charset="utf-8">
+		<title>Examenvraag HTML/CSS - Vraag 2</title>
+		
+		<style>		
+			.clearfix:after {
+				content: ".";
+				display: block;
+				clear: both;
+				visibility: hidden;
+				line-height: 0;
+				height: 0;
+			}
+			
+			body
+			{
+				margin:0px;
+			}
+			
+			a
+			{
+				color:white;
+			}
+			
+			
+			ul 
+			{
+				list-style-type:none;
+				margin:0px;
+				padding:0px;
+			}
+			
+			/*Container*/
+			.container
+			{
+				width:984px;
+				margin:0 auto;
+			}
+			
+			/*HEADER*/
+			.head
+			{
+				background-color:grey;
+				text-align:right;
+			}
+			
+			.head a
+			{
+				padding:5px 20px;
+			}
+			
+			.hero {
+				width:100%;
+				height:500px;
+				background:url('ai-weiwei.jpg') no-repeat 0 0;
+				background-size:cover;
+				position:relative;
+			}
+			
+			.caption
+			{
+				position:absolute;
+				bottom:0px;
+				padding:10px;
+				width:100%;
+				background-color:rgba(255,255,255,0.5);
+			}
+			/* NAV */
+						
+			.nav {
+				background-color:yellow;
+			}
+			
+			.nav ul
+			{
+				text-align:right;
+			}
+			
+			.nav li
+			{
+				display:inline;
+			}
+			
+			.nav a
+			{
+				display:inline-block;
+				color:white;
+				text-decoration:none;
+				text-align:center;
+				background-color:grey;
+				padding:5px 20px;
+			}
+
+			/*BODY*/
+			section {
+				height:300px;
+			}
+			.main-content
+			{
+				float:left;
+				width:70%;
+				background-color:lightgrey;
+				height:100%;
+			}			
+			
+			.side-panel
+			{
+				float:right;
+				background-color:darkgrey;
+				height:100%;
+				width:30%;
+			}
+			/*Footer*/
+			footer
+			{
+				border-top:1px solid red;
+			}
+			footer div 
+			{
+				color:white;
+				float:left;
+				width:327px;
+				background-color:blue;
+				margin-right:1px;
+			}
+			footer div:last-child
+			{
+				width:328px;
+				margin:0;
+			}
+		</style>
+</head>
+
+<body>
+	
+	<div class="container">
+	<header>
+		<div class="head">
+			<a href="#">inloggen</a>
+		</div>
+		<div class="hero">
+			<div class="caption">Ai Weiwei en 100 000 zonnebloempitten.</div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#">link 1</a></li>
+				<li><a href="#">link 2</a></li>
+				<li><a href="#">link 3</a></li>
+				<li><a href="#">link 4</a></li>
+			</ul>
+		</div>		
+	</header>
+	
+	<section class="clearfix">
+		<div class="main-content">Main content</div>
+		<div class="side-panel">Side panel</div>
+	</section>	
+	
+	<footer>
+		<div class="column-01">Kolom 1</div>
+		<div class="column-02">Kolom 2</div>
+		<div class="column-03">Kolom 2</div>
+	</footer>	
+</body>
+</html>

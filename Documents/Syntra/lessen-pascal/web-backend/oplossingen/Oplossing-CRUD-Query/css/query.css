@@ -1,0 +1,62 @@
+body{
+	font-family: arial;
+}
+.even{
+
+	background-color: lightgray;
+}
+
+.oneven{
+
+	
+}
+
+h1{	
+	color: gray;
+	font-weight: lighter;
+	margin-left: auto;
+	border-bottom: 1px solid darkgray;
+}
+
+table{
+	margin-top: 20px;
+	margin-left: 177px;
+}
+
+
+th{
+	background-color: lightblue;
+	text-transform: capitalize;
+}
+
+.nummer{
+	width: 40px;
+	text-align: center;
+}
+
+.naam{
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 310px;
+}
+
+tr{
+	height: 35px;
+}
+
+.gelukt{
+
+	background-color: lightgreen;
+	border: 1px solid darkgreen;
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+}
+
+.mislukt{
+	background-color: orange;
+	border: 1px solid red;	
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+}

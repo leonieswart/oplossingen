@@ -1,0 +1,10 @@
+- Zorg ervoor dat je de .htaccess bestanden zeker hebt gedownload van de ftp!
+	(.htaccess zichtbaar maken in filezilla!) 
+
+- voeg php058-mvc.sql in de database php058-mvc
+
+- Zet deze map in xampp/htdocs/
+
+- pas in config/config.php al het nodige aan
+
+MVC framework gebaseerd op http://anantgarg.com/2009/03/13/write-your-own-php-mvc-framework-part-1/

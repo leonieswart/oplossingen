@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# check that it isn't a request for an image
+RewriteCond %{REQUEST_URI} !\.(jpe?g|png|gif|bmp)$ [NC]
+
+# forbid access
+RewriteRule ^ verboden-toegang.php [L,F]

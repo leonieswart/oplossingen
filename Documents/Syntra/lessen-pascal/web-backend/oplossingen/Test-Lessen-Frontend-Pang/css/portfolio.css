@@ -1,0 +1,159 @@
+@font-face{
+	font-family: bebasneue;
+	src:url(fonts/bebasneue-webfont.ttf);
+}
+
+body{
+	font-family: bebasneue;
+}
+
+span{
+	color: #f2b19c;
+}
+
+.backgroundTOP{
+	background-color: #f2b19c;
+	width: 50px;
+	height: 65px;
+	padding: 0;
+	z-index: 1;
+}
+
+.TOPleft{
+	margin-left: -70px;
+	float: left;
+	border-right: 5px solid white;
+}
+
+.TOPright{
+	border-left: 5px solid white;
+	float: right;
+	margin-right: -70px;
+}
+
+.backgroundBOTTOM{
+	background-color: #f2b19c;
+	height: 275px;
+	padding: 0;
+	margin-top: 15px;
+	width: 50px;
+	z-index: 1;
+}
+
+.BOTTOMleft{	
+	margin-left: -70px;
+	border-right: 5px solid white;
+	float: left;
+}
+
+.BOTTOMright{
+	border-left: 5px solid white;
+	float: right;
+	margin-right: -70px;
+}
+
+.containerTitel{
+	background-color: #e8603c;
+	height: 65px;
+	padding:0;
+	position: relative;
+	z-index: 100
+}
+
+.titel{
+	font-size: 25px;
+	color: white;
+	margin-top: 16px;
+	margin-left: 20px;
+}
+
+.nav2{
+	margin-top: 15px;
+	float: left;
+	padding-left: 0;
+}
+
+.ItemNav2{
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+	padding: 5px;
+}
+
+.ItemNav2 a{
+	font-size: 15px;
+	font-weight: lighter;
+	color: #b9b9b9;
+	text-decoration: none;
+}
+
+.ItemNav2:hover{
+	background-color: #e8603c;
+}
+
+.ItemNav2 a:hover{
+	color: #FFFFFF;
+}
+
+.plus{
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: 1;
+}
+
+.onderschrift:hover > .plus{
+	visibility: visible;	
+}
+
+
+
+.onderschrift{
+	width: 220px;
+	margin-bottom: 15px;
+	padding:0; 
+	margin-right: 70px;
+	margin-top: 15px;
+}
+
+.ondertitel{
+	font-size: 18px;
+	color:#b9b9b9;
+	padding-top: 10px;
+	padding-left: 15px;
+	display: block;
+	border-left:1px solid lightgray;
+	border-right:1px solid lightgray;
+	margin-bottom: 0;
+}
+
+.datum{
+	color:#e8603c;
+	font-size: 12px;
+	padding-left: 15px;
+	display: block;
+	border-left:1px solid lightgray;
+	border-right:1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 15px;
+}
+
+.footer{
+	background-color: #e8603c;
+	height: 275px;
+	margin-top: 15px;
+	z-index: 10;
+}
+
+.footerTekst{
+	margin-left: 20px;
+	color: white;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.logo{
+	margin-left: 20px;
+	margin-top: 30px;
+}

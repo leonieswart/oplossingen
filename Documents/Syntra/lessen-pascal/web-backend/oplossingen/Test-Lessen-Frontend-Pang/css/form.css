@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('../font/kaushanscript-regular-webfont.eot');
+    src: url('../font/kaushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('../font/kaushanscript-regular-webfont.woff') format('woff'),
+         url('../font/kaushanscript-regular-webfont.ttf') format('truetype'),
+         url('../font/kaushanscript-regular-webfont.svg#kaushan_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.page{
+	margin: auto;
+	width: 100%;
+	margin-top: 20px;
+		
+}
+form{
+	font-family: arial;
+	font-size: 16px;
+}
+
+fieldset{
+	padding: 0px;
+	margin-bottom: 30px;
+	font-family: 'kaushan_scriptregular';
+	font-size: 25px;
+	margin-left: 20px;
+	
+}
+
+#FeedbackPers, #FeedbackDier{
+	width: 100%;
+	padding: 10px;
+	background-color: #ffcfc1;
+	border: 1px solid red;
+	font-family: arial;
+	font-size: 16px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	display: none;	
+}
+
+label{
+	font-family: arial;
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+input{
+	display: block;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: lighter;
+	width: 300px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	padding: 5px;
+	border: 1px solid #4e616b;
+}
+
+input:focus{
+	background-color: #e8603c;
+	border: none;
+}
+
+.submit{
+	background-color: #e8603c;
+	color: black;
+	border: none;
+	text-transform: uppercase;
+	font-family: "kaushan_scriptregular";
+}
+
+

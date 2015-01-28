@@ -1,0 +1,12 @@
+<section>
+	
+	<?php foreach ( $artikels as $id => $artikel): ?>
+		<article>
+			<h1><?= $artikel[ 'title' ] ?></h1>
+			<p><?= $artikel[ 'body' ] ?></p>
+			<p><?= $artikel[ 'tags' ] ?></p>
+			<a href="phpoefening-031-a-oplossing.php?artikel=<?= $id ?>">lees meer</a>
+		</article>
+	<?php endforeach ?>
+
+</section>
