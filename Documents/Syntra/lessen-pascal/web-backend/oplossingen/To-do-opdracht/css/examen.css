@@ -1,0 +1,212 @@
+@font-face{
+	font-family: bebasneue;
+	src:url(fonts/bebasneue-webfont.ttf);
+}
+
+body
+{
+	font-family: arial;
+	color:#454545;
+}
+
+ul
+{
+	list-style-type:none;
+	padding-left: 20px
+}
+
+li
+{
+	margin-bottom: 15px;
+	display:table-row;
+}
+
+.container{
+	border: 1px solid black;
+	width:  350px;
+	margin-right: 30px;
+	margin-left: 30px;
+	float: left;
+	margin-top: 20px;
+}
+
+[name="submit"]{
+	position: relative;
+	border: 0;
+	background-color:#08214F;
+	margin-left: 20px;
+	font-size:20px;
+	color: white;
+	width: 305px;
+	font-family: bebasneue;
+	margin-top: 35px;
+	margin-bottom: 40px;
+
+}
+
+[name="taak"]{
+	position: relative;
+	margin-left: 5px;
+	margin-top: 23px;
+	border:1px solid #08214F;
+	font-size:20px;
+	color:  #08214F;
+	width: 200px;
+}
+
+
+h2{
+	padding-left: 20px;
+	border-bottom: 1px solid;
+	font-family: bebasneue;
+}
+
+h1{
+	text-align: center;
+	font-family: bebasneue;
+	color:#08214F;
+	border-bottom: 1px solid #08214F;
+}
+
+.hide{
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+[name="afvinken"]{
+	position: relative;
+	border:0;
+	background-color:transparent;
+	margin:0;
+	font-size:15px;
+	padding:0 0 0 22px;
+	cursor:pointer;
+	outline-width:0;
+	float: left;
+	clear: left;
+	font-family: arial;
+	color: #08214F;
+}
+
+[name="afvinken"]:before{
+	content:"";
+	position:absolute;
+	top:3px;
+	left:0;
+	width:12px;
+	height:12px;
+	display:block;
+	border-radius:30%;
+	border: 1px solid black;
+}
+
+.not-done:hover{
+	color: green;
+}
+
+.not-done:hover:before{
+	content:"";
+	background-color: #3CC904;
+}
+
+.done{
+	text-decoration: line-through;
+	color: #08214F;
+}
+
+.done:before{
+	content:"";
+	background-color: #08214F;
+}
+
+.done:hover:before{
+	background-color:#3CC904;
+
+}
+
+[name=verwijderen]{
+	position: relative;
+	border:0;
+	background-color:transparent;
+	margin:0;
+	padding:0 0 0 22px;
+	cursor:pointer;
+	outline-width:0;
+	float:right;
+	margin-left: 5px;
+	width:18px;
+	height:18px;
+	display:inline-block;
+}
+
+[name=verwijderen]:before{
+	position:absolute;
+	left:0px;
+	top:2px;
+	width:15px;
+	line-height:15px;
+	font-size:9px;
+	text-align:center;
+	content:"X";
+	color: white;
+	background-color: #08214F;
+	border-radius: 100%;
+
+}
+
+#scorebord{
+	background-color:#08214F;
+	line-height:22px;
+	margin-top: 20px;
+	margin-right: 3px;
+	height: 240px;
+	width: 350px;
+	color:white;
+	float: left;
+}
+
+.titel{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: bebasneue;
+	font-size: 22px;
+}
+
+.score{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: bebasneue;
+	font-size: 30px;
+}
+
+.modal{
+	border-radius:3px;
+}
+
+.error{
+	background-color:red;
+	line-height:32px;
+	color:white;
+}
+
+.error:before{
+	content:"!";
+	display:inline-block;
+	width:32px;
+	height:32px;
+	font-size:32px;
+	text-align:center;
+	font-weight:bold;
+	float:left;	
+}
+
+.okay{
+	background-color:#3CC904;
+	line-height:32px;
+	color:white;
+	padding-left: 5px;
+}
+
