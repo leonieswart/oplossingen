@@ -1,6 +1,8 @@
 <?php
 
 $message	=	"";
+$confirm 	= false;
+$nummer 	= false;
 
 	try {
 			//connectie maken met DB bieren
@@ -8,6 +10,33 @@ $message	=	"";
 
 			//bericht wordt getoond indien connectie gelukt is
 			$message	=	"Connectie gelukt";
+
+			if ( isset( $_POST["delete"] ) ) {
+
+				$confirm = true;
+				$nummer = $_POST["delete"];
+
+			}
+
+			if ( isset( $_POST["bevestig"] ) ) {
+					
+				$nummer = $_POST["bevestig"];	
+
+				//de MySQL code die de correcte gegevens uit de DB selecteert
+				$queryDelete = " DELETE FROM brouwers
+
+								 WHERE brouwernr =  :brouwernr	"	;	
+
+
+				//de string wordt voorgeladen om te gebruiken				    
+				$deleteStatement = $connectieDB->prepare($queryDelete);
+
+				$deleteStatement->bindValue( ':brouwernr', $nummer );
+
+				//de query wordt uitgevoerd
+				$deleteStatement->execute();
+
+			}
 
 			//de MySQL code die de correcte gegevens uit de DB selecteert
 			$queryString = " SELECT *
@@ -34,34 +63,6 @@ $message	=	"";
 				};
 
 				//var_dump($recordsArray);
-
-
-			if ( isset( $_POST["delete"] ) ) {
-
-
-				$nummer = $_POST["delete"];
-					
-				//connectie maken met DB bieren
-				$connectieDB = new PDO("mysql:host=localhost;dbname=bieren", "root", "");
-
-				//bericht wordt getoond indien connectie gelukt is
-				$message	=	"Connectie gelukt";
-
-
-				//de MySQL code die de correcte gegevens uit de DB selecteert
-				$queryDelete = " DELETE FROM brouwers
-
-								 		WHERE brouwernr =  $nummer	"	;	
-
-
-				//de string wordt voorgeladen om te gebruiken				    
-				$deleteStatement = $connectieDB->prepare($queryDelete);
-
-				//de query wordt uitgevoerd
-				$deleteStatement->execute();
-
-				header( 'location: ' . $_SERVER[ 'PHP_SELF' ]  ); 
-			}
 
 		}
 
@@ -113,11 +114,27 @@ $message	=	"";
 			
 			</thead>
 
-
-
 			<tbody>
 
-			<form method="post" action="delete.php">
+			<?php if ($confirm == true): ?>
+
+				<form method="post" action="deletedeel2.php">
+				
+					<div>
+						<p>Bent u zeker dat u de brouwer met ID <?php echo $nummer ?> wilt verwijderen?</p>
+
+						<button type="submit" name="bevestig" value="<?php echo $nummer ?>"> Ja </button>
+
+						<button type="submit" name="annuleer"> Nee </button>
+
+					</div>
+
+				</form>
+				
+			<?php endif ?>
+
+				<form method="post" action="deletedeel2.php">
+			
 
 				<?php foreach ($recordsArray as $key => $value): ?> 
 
