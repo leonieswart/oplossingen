@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^rasmus.php/([^/\.]+)/?$ rasmus.php?user=$1

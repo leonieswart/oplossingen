@@ -32,10 +32,10 @@ if  ( isset( $_POST['submit'] ) )
        
         $email = $_POST['e-mail'];
 
-        $connectie = new PDO("mysql:host=localhost;dbname=opdracht-security-login", "root", "");    
+        $connectie = new PDO("mysql:host=localhost;dbname=opdracht-file-upload", "root", "");    
 
         //check if email is valid
-        if  ( filter_var( $email, FILTER_VALIDATE_EMAIL ) != FALSE && $_POST['wachtwoord'] != '' ) 
+        if  ( filter_var( $email, FILTER_VALIDATE_EMAIL ) != FALSE ) 
 
         	{
                 //connectie maken met DB via een Class

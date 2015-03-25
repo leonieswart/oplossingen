@@ -1,0 +1,85 @@
+<!doctype html>
+	<html>
+	    <head>
+	        <meta charset="utf-8">
+	        <meta name="description" content="">
+	        <meta name="viewport" content="width=device-width, initial-scale=1">
+	        <title>Untitled</title>
+	        <link rel="stylesheet" href="css/style.css">
+	        <link rel="author" href="humans.txt">
+	    </head>
+
+	    <script type="text/javascript">
+
+	    function jsonOphalen() 
+
+	    {
+		    // 1 XMLHttpRequest object maken
+
+		    var hr = new XMLHttpRequest();
+
+		    // variabelen voor mijn open
+
+		    var url = "kjsonMaken.php";
+		    hr.open( "POST" , url , true );
+
+		    //variabelen via header doorsturen
+		    hr.setRequestHeader("Content-type", "application/x-www-from-urlencoded")
+
+		    hr.onreadystatechange = function()
+
+		    {
+
+			    if 	( hr.readyState ==4 && hr.status == 200) // 4 = alles klaar, 200 = ok go!
+			    	{
+
+				    	var dataterug = JSON.parse(hr.responseText);
+				    	document.getElementById("terug").innerHTML = "";
+
+				    	for( var obj in dataterug ) {
+
+				    		document.getElementById("terug").innerHTML +=
+				    		dataterug[obj].naam + " is " + dataterug[obj].leeftijd + " jaar oud en woont in " + dataterug[obj].stad + "<br />";
+				    	}
+
+				    }		    	
+
+		    }
+
+
+		    hr.send(null);
+
+		    document.getElementById("terug").innerHTML = "Ik ben nog bezig.";
+
+		}
+
+
+	    </script>
+	    
+
+
+
+
+
+
+
+
+
+
+	    <body>
+
+
+
+	    <h1> AJAX </h1>
+
+<form method="post">
+	   
+
+	    <input name="knopke" type="submit" value="Json ophalen" onclick="jsonOphalen();">
+</form>	        
+
+
+<div id="terug"></div>
+	        
+	    </body>
+	</html>	

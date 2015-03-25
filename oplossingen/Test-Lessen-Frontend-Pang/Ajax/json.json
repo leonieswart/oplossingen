@@ -1,0 +1,10 @@
+{
+	"k1": { "naam":"jonas", "leeftijd":30, "stad":"Leuven" };
+	"k1": { "naam":"leonie", "leeftijd":24, "stad":"Kontich" };
+	"k1": { "naam":"olga", "leeftijd":27, "stad":"Moskou" };
+	"k1": { "naam":"christoph", "leeftijd":23, "stad":"Meer" };
+	"k1": { "naam":"carl", "leeftijd":25, "stad":"Leuven" };
+	"k1": { "naam":"glen", "leeftijd":23, "stad":"Mechelen" };
+	"k1": { "naam":"yasmine", "leeftijd":23, "stad":"Borgerhout" };
+	"k1": { "naam":"pang", "leeftijd":30, "stad":"Berchem" };
+}

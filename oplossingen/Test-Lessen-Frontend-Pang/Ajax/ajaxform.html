@@ -1,0 +1,76 @@
+<!doctype html>
+	<html>
+	    <head>
+	        <meta charset="utf-8">
+	        <meta name="description" content="">
+	        <meta name="viewport" content="width=device-width, initial-scale=1">
+	        <title>Untitled</title>
+	        <link rel="stylesheet" href="css/style.css">
+	        <link rel="author" href="humans.txt">
+	    </head>
+
+	    <script type="text/javascript">
+	    function doorsturenNaarPHP() {
+	    // 1 XMLHttpRequest object maken
+
+	    var hr = new XMLHttpRequest();
+
+	    // variabelen voor mijn open
+
+	    var url = "form.php";
+	    var vn = document.getElementById("voornaam").value;
+	    var an = document.getElementById("achternaam").value;
+
+	    var vars = "voornaam="+vn+"&achternaam="+an+;
+	    hr.open( "POST" , url , true );
+
+	    //variabelen via header doorsturen
+	    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+
+	    hr.onreadystatechange = function(){
+
+
+	    	if 	( hr.readyState ==4 && hr.status == 200) // 4 = alles klaar, 200 = ok go!
+	    		{
+	    			var dataterug = hr.responseText;
+	    			document.getElementById("terug").innerHTML = dataterug;
+	    		}
+	    }
+
+
+	    hr.send(vars);
+	    document.getElementById("terug").innerHTML = "Ik ben nog bezig.";
+
+	}
+
+
+	    </script>
+	    
+
+
+
+
+
+
+
+
+
+
+	    <body>
+
+
+
+	    <h1> AJAX </h1>
+
+<form method="post">
+	    <p> Voornaam <input id="voornaam" name="voornaam" type="text"> </p>
+	    <p> achternaam <input id="achternaam" name="achternaam" type="text"> </p>
+
+	    <input name="knopke" type="submit" value="Verstuur data naar php" onclick="doorsturenNaarPHP();">
+</form>	        
+
+
+<div id="terug"></div>
+	        
+	    </body>
+	</html>	
