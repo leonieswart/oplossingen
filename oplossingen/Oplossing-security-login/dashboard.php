@@ -43,15 +43,8 @@
 
 	              	}
 
-	            
 
-	 }
-		
-
-	else
-		{        header( 'location: ' . "login.php"  ); }
-
-	 if ( isset( $_POST['uitloggen'] ) ) 
+				 if ( isset( $_POST['uitloggen'] ) ) 
 
 	             	{
 	              		setcookie('login', "", time()- 30000000);
@@ -60,7 +53,17 @@
 	              		header( 'location: ' . "login.php"  );
 
 
-	              	} 	
+	              	}  	
+
+	            
+
+	 }
+		
+
+	else
+		{        header( 'location: ' . "login.php"  ); }
+
+ 	
 
 
 ?>
@@ -78,7 +81,7 @@
     </head>
     <body>
 
-    <form method="post" action="dashboard.php">
+    <form method="post" action="<?php echo $_SERVER[ 'PHP_SELF' ] ?>">
 
     <input type="submit" value="uitloggen" name="uitloggen">
 
