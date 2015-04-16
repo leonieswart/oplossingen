@@ -1,4 +1,5 @@
 RewriteEngine On
 
-RewriteRule ^rasmus.php/([^/\.]+)/?$ rasmus.php?user=$1
-RewriteRule ^rasmus.php/([^/\.]+)/?$ rasmus.php?role=$1
+RewriteRule ^rasmus.php/([^/\.]+)/?/([^/\.]+)/?$ original.php?role=$1&user=$2
+
+
