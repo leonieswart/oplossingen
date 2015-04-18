@@ -3,14 +3,14 @@
 
 @section('content')
 
-{!! Form::open( array( 'action' => 'TakenController@nieuweTaakToevoegen', 'class' => "form-horizontal" ) )  !!}
+{!! Form::open( array( 'action' => 'TakenController@nieuweTaakToevoegen', 'class' => "horizontal" ) )  !!}
 
 	<div class="form-group">
 		
 		{!! 	Form::label('taak', 'Taak', array( 'class' => 'label' ) ) 	!!}
 
 		{!! 	Form::text('taak', '', array( 	'required', 
-				              					'class'=>'form-control', 
+				              					'class'=>'control', 
 				              					'placeholder'=>'Vul hier een taak in.' ) ) 	!!}
 	
 	</div>              
@@ -22,6 +22,15 @@
 											'werk' 		=> 'Werk',
 										    'school' 	=> 'School',
 									  	    'vrijetijd' => 'Vrije tijd'  ] ) 	!!}
+
+	</div>	
+
+	<div class="form-group">
+
+		{!! 	Form::label('deadline', 'Deadline', array( 'class' => 'label' ) ) 	!!}
+		{!! 	Form::text('date', null, array(		'class' => 'control datepicker',
+													'placeholder' => 'Kies een datum waartegen deze taak voltooid moet zijn.', 
+													'id' => 'datetimepicker') ) 	!!}
 
 	</div>								  	   
 

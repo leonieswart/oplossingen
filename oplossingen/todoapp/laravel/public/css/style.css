@@ -1,5 +1,5 @@
 table{
-	width: 600px;
+	width: 900px;
 	margin: 60px auto 20px auto;
 }
 
@@ -57,18 +57,13 @@ h1{
 
 }
 
-.form-control{
-	width: 50%;
-	margin: 0 auto 0 auto;
-}
-
-.form-horizontal{
+.horizontal{
 	width: 80%;
 	text-align: center;
 	margin: 0 auto 0 auto;
 }
 
-#categorie{
+#categorie, .control{
 	display: block;
 	width: 50%;
 	height: 34px;
@@ -91,11 +86,21 @@ h1{
 
 }
 
+.groen{
+	background-color: #BEF1BA;
+}
+
+.oranje{
+	background-color: #F1B660;
+}
+
+.rood{
+	background-color: #F1798F;
+}
 
 .score{
 	text-align: center;
 	width: 200px;
-	padding:15px;
 	margin: 0 160px 0 auto;
 	color: #7F7F7F;
 }

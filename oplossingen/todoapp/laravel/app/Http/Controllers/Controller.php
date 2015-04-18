@@ -11,6 +11,7 @@ abstract class Controller extends BaseController {
 
 	public function __construct()
 	{
+
 			if  ( \Auth::guest() )
 			
 			{

@@ -32,6 +32,14 @@ class TakenController extends Controller {
 				return redirect('/nieuweTaak');
 			}
 
+		if  (Input::get('date') == 0000-00-00) 
+
+			{
+
+				flash()->error('Voeg een deadline toe.');
+				return redirect('/nieuweTaak');
+			}	
+
 		else 
 
 			{
@@ -40,12 +48,13 @@ class TakenController extends Controller {
 				// als je binnen een klasse naar een andere klasse verwijst, zet je die backslash er voor 
 				// zelfde principe als in een css bestand verwijzen naar iets in de img map
 
-				\DB::insert('insert into taken (taak, categorie, voltooid, token, gebruiker) values (?, ?, ?, ?, ?)',
+				\DB::insert('insert into taken (taak, categorie, voltooid, deadline, token, gebruiker) values (?, ?, ?, ?, ?, ?)',
 
 					[
 						Input::get('taak'),
 						Input::get('categorie'),
 						Input::get('voltooid'),
+						Input::get('date'),
 						Input::get('_token'),
 						Input::get('gebruiker')
 					]

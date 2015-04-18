@@ -20,9 +20,12 @@
 
 		<!-- tabel hoofding -->
 			<th> Taak </th>
-			<th> Categorie </th>		
+			<th> Categorie </th>
+			<th> Deadline </th>		
 			<th> Klaar? </th>
 			<th> Verwijderen </th>
+
+			
 
 
 			<!-- uitloopen van de array met alle taken in -->
@@ -32,11 +35,29 @@
 
 				<!-- als de taak een waarde heeft van 0 op het veld voltooid dan worden ze hier afgebeeld -->
 					@if($array->voltooid == 0)
-
+					
 						<!-- onderstaande notatie gebruiker ipv $array['taak']
 						 $array['taak'] zal niet werken omdat het hier om een object gaat van een klasse ipv een array -->
 						<td> 					{{ $array->taak }} 		</td>
+
 						<td class="center"> 	{{ $array->categorie }}	</td>
+
+
+
+						@if ( ($vandaag - strtotime($array->deadline) ) == 0 )
+
+							<td class="center oranje"> 	{{ $array->deadline }}	</td>
+
+						@elseif ( ($vandaag - strtotime($array->deadline) ) < 0 )
+
+							<td class="center groen"> 	{{ $array->deadline }}	</td>
+						
+						@elseif ( ($vandaag - strtotime($array->deadline) ) > 0 )
+												
+							<td class="center rood"> 	{{ $array->deadline }}	</td>
+						
+						@endif
+
 
 						<td class="center">		
 

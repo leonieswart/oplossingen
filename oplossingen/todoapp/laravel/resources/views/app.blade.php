@@ -12,6 +12,8 @@
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+
 	
 
 
@@ -68,7 +70,7 @@
 
 					<!-- als je bent ingelogd krijg je de optie logout -->
 					@else
-						<li><p class="score"> 	 TO DO: {{$onvoltooid}}  -   DONE: {{$voltooid}}  </p></li>
+						<li> <a href="{{ url('/taken') }}" class="score"> 	 TO DO: {{$onvoltooid}}  -   DONE: {{$voltooid}}  </a></li>
 
 						<li><a href="{{ url('/nieuweTaak') }}">Taak toevoegen</a></li>
 						<li><a href="{{ url('/auth/logout') }}">Afmelden ( {!! $user !!} )</a></li>
@@ -94,6 +96,14 @@
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+	<script type="text/javascript">
+	    jQuery(document).ready(function(){
+	        jQuery('#datetimepicker').datepicker({dateFormat: 'yy/mm/dd'});
+	    })
+	</script>
 
 
 </body>
