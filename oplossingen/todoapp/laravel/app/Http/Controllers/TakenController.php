@@ -5,7 +5,8 @@ use Redirect;
 
 // Dit is een klasse genaamd RegistreerController
 class TakenController extends Controller {
-	
+
+// -------------------------- REDIRECT NAAR TAAK TOEVOEGEN ---------------------//
 
 	public function nieuweTaak()
 	{	
@@ -16,9 +17,13 @@ class TakenController extends Controller {
 				return redirect('/');	
 			}
 
-
 		return view('todo.nieuweTaak');
 	}
+
+
+
+
+// -------------------------- NIEUWE TAAK TOEVOEGEN AAN DB ---------------------//
 
 	// als ge gebruiker naar index.php/nieuweTaak surft wordt onderstaande query uitgevoerd.
 	public function nieuweTaakToevoegen()
@@ -68,6 +73,9 @@ class TakenController extends Controller {
 	}
 
 
+
+// -------------------------- TAAK VOLTOOIEN ---------------------//
+
 	public function voltooien()
 	{
 		$voltooid = Input::get('voltooid');
@@ -101,6 +109,11 @@ class TakenController extends Controller {
 
 	}
 
+
+
+
+// -------------------------- TAAK DELETEN ---------------------//
+
 	public function deleten()
 	{
 
@@ -110,5 +123,6 @@ class TakenController extends Controller {
 		return redirect('/taken');
 
 	}
+
 
 }

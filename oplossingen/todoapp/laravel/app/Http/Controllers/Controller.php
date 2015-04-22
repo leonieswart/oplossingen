@@ -12,12 +12,18 @@ abstract class Controller extends BaseController {
 	public function __construct()
 	{
 
+			//als je een gast bent dan word je gestuurd naar index
 			if  ( \Auth::guest() )
 			
 			{
-				return redirect('/');	
+				$pad = "auth/register";
+				\View::share('pad', $pad);
+	
+				return redirect('/');
+				
 			}
 
+			// ben je ingelogd dan word je gestuurd naar taken overzicht
 			else
 
 			{
@@ -26,6 +32,9 @@ abstract class Controller extends BaseController {
 						{
 						   $user = \Auth::user()->email;
 							\View::share('user', $user);
+
+							$pad = "taken";
+							\View::share('pad', $pad);
 						}
 
 					else

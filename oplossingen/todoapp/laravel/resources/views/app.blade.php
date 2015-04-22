@@ -3,22 +3,24 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Laravel</title>
 
+	<!-- CSS -->
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 
-	
-
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,6 +28,8 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+
 </head>
 
 <body>
@@ -71,7 +75,6 @@
 					<!-- als je bent ingelogd krijg je de optie logout -->
 					@else
 						<li> <a href="{{ url('/taken') }}" class="score"> 	 TO DO: {{$onvoltooid}}  -   DONE: {{$voltooid}}  </a></li>
-
 						<li><a href="{{ url('/nieuweTaak') }}">Taak toevoegen</a></li>
 						<li><a href="{{ url('/auth/logout') }}">Afmelden ( {!! $user !!} )</a></li>
 				
@@ -88,21 +91,36 @@
 
 	<div class="container">
 
-	@include('flash::message')
-<!-- HIER ZEGGEN WE DAT DE SECTION CONTENT (DIE MAKEN WE IN DE ANDERE PAGINA'S) INGEVOEGD MOET WORDEN -->
-	@yield('content')
+		<!-- hier worden de error messages getoond -->
+		@include('flash::message')
 
-</div>
+		<!-- HIER ZEGGEN WE DAT DE SECTION CONTENT (DIE MAKEN WE IN DE ANDERE PAGINA'S) INGEVOEGD MOET WORDEN -->
+		@yield('content')
+
+	</div>
+
+
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
+	<!-- jquery voor datepicker bij nieuwe taak toevoegen -->
 	<script type="text/javascript">
 	    jQuery(document).ready(function(){
 	        jQuery('#datetimepicker').datepicker({dateFormat: 'yy/mm/dd'});
 	    })
+
+	    //nieuwe categorie toevoegen 
+	    function categorieToevoegen(){
+	    	var optie = document.getElementById('nieuweCat').value;
+	    	var selector = document.getElementById("categorie");
+			var option = document.createElement("option");
+			option.text = optie;
+			selector.add(option);
+	    }
+	    
 	</script>
 
 

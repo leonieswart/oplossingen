@@ -2,6 +2,7 @@
 
 
 @section('content')
+
 	
 	<!-- als de array $taken leeg en er dus niets in de todo lijst zit tonen we deze boodschap -->
 	@if(empty($taken))
@@ -14,6 +15,7 @@
 
 		<!-- checken we eerst of de array nietKlaar (waar de onvoltooide taken in zitten) niet leeg is -->	
 		@if ( !empty( $nietKlaar ) )
+
 
 		<!-- als er dus taken zijn die nog niet klaar zijn, tonen we de tabel met die taken in -->
 		<table border="1">
@@ -59,26 +61,25 @@
 						@endif
 
 
-						<td class="center">		
+						<td class="center">	
 
-							<form method="post" action="voltooien">
+						{!! Form::open( array( 'action' => 'TakenController@voltooien' ) )  !!}
+				
+							{!! Form::hidden('voltooid',  $array->voltooid ) !!}
 
 								<button value="{{ $array->taken_id }} " name="voltooien"> <img src="{{ asset('/img/check.png') }}" alt="voltooien">  </button>
-								<input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
-								<input type="hidden" name="voltooid" value="{{ $array->voltooid }} ">
 
-							</form>
+						{!! Form::close() !!}
 
 						</td>	
 
 						<td class="center">		
 
-							<form method="post" action="deleten">
-
+						{!! Form::open( array( 'action' => 'TakenController@deleten' ) )  !!}
+				
 								<button value="{{ $array->taken_id }} " name="deleten"> <img src="{{ asset('/img/delete.png') }}" alt="deleten">  </button>
-								<input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
 
-							</form>
+						{!! Form::close() !!}
 							
 						</td>							
 					
@@ -120,27 +121,28 @@
 						<!-- onderstaande notatie gebruiker ipv $array['taak']
 						 $array['taak'] zal niet werken omdat het hier om een object gaat van een klasse ipv een array -->
 						<td> 	{{ $array->taak }} 		</td>
+
 						<td class="center"> 	{{ $array->categorie }}	</td>
+
 						<td class="center">		
 
-							<form method="post" action="deleten">
-
+							{!! Form::open( array( 'action' => 'TakenController@deleten' ) )  !!}
+				
 								<button value="{{ $array->taken_id }} " name="deleten"> <img src="{{ asset('/img/delete.png') }}" alt="deleten">  </button>
-								<input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
 
-							</form>
+							{!! Form::close() !!}
 							
 						</td>	
 
 						<td class="center">		
 
-							<form method="post" action="voltooien">
+							{!! Form::open( array( 'action' => 'TakenController@voltooien' ) )  !!}
+				
+							{!! Form::hidden('voltooid',  $array->voltooid ) !!}
 
 								<button value="{{ $array->taken_id }} " name="voltooien"> <img src="{{ asset('/img/check.png') }}" alt="voltooien">  </button>
-								<input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
-								<input type="hidden" name="voltooid" value="{{ $array->voltooid }} ">
 
-							</form>
+							{!! Form::close() !!}
 
 						</td>		
 					@endif

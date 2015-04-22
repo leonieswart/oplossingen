@@ -10,6 +10,7 @@ class ToDoController extends Controller {
 	// Als de gebruiker naar index surft wordt de index pagina uit de view geladen
 	public function index()
 	{
+		
 		return view('todo.index');
 	}
 
@@ -35,11 +36,12 @@ class ToDoController extends Controller {
 		$vandaag = date("Y/m/d");
 		$vandaag = strtotime($vandaag);
 
+		
 		// ben je ingelogd dan krijg je het overzicht van de taken te zien			
 		$taken = \DB::select('select taken_id, taak, categorie, voltooid, deadline from taken where gebruiker = :gebruiker', ['gebruiker' => $user]);
 
 		$taken = array_dot($taken);
-
+		
 		return view('todo.taken')->with('taken', $taken)->with('vandaag', $vandaag);
 	}
 

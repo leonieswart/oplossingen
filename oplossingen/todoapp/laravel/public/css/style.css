@@ -86,6 +86,34 @@ h1{
 
 }
 
+.new{
+	font-size: 12px;
+	width: 30%;
+	margin-left: 12px;
+	margin-right: 12px;
+	float: left;
+	padding: 5px;
+	width: 150px;
+}
+
+#nieuweCat{
+	width: 270px;
+}
+
+.clear{
+	clear: both;
+	padding-left: 22%;
+}
+
+.knop{
+	float: left;
+	width: 35px;
+}
+
+.clearboth{
+	clear: both;
+}
+
 .groen{
 	background-color: #BEF1BA;
 }
